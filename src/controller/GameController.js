@@ -1,3 +1,4 @@
+import { Random } from '@woowacourse/mission-utils';
 import Car from '../model/Car.js';
 import validator from '../utils/validator.js';
 
@@ -18,6 +19,13 @@ class GameController {
   setRound(round) {
     validator.isPositiveInteger(round);
     this.totalRound = Number(round);
+  }
+
+  startRound() {
+    for (const car of this.cars) {
+      const random = Random.pickNumberInRange(0, 9);
+      car.advance(random);
+    }
   }
 }
 

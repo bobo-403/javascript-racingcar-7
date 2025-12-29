@@ -9,6 +9,10 @@ class Car {
     this.name = name;
     this.pos = 0;
   }
+
+  advance(random) {
+    if (random >= 4) this.pos += 1;
+  }
 }
 
 export default Car;
