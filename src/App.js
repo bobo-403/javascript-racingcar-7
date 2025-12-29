@@ -13,6 +13,7 @@ class App {
     this.gameController.setCars(carNames);
 
     const round = await inputRound();
+    this.gameController.setRound(round);
   }
 }
 
