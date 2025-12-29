@@ -1,4 +1,5 @@
 import Car from '../model/Car.js';
+import validator from '../utils/validator.js';
 
 class GameController {
   cars;
@@ -15,6 +16,7 @@ class GameController {
   }
 
   setRound(round) {
+    validator.isPositiveInteger(round);
     this.totalRound = Number(round);
   }
 }
