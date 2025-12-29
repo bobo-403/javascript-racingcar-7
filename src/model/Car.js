@@ -14,6 +14,14 @@ class Car {
     if (random >= 4) this.pos += 1;
   }
 
+  getName() {
+    return this.name;
+  }
+
+  getPos() {
+    return this.pos;
+  }
+
   getPosState() {
     return `${this.name} : ${'-'.repeat(this.pos)}`;
   }
