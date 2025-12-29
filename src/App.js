@@ -1,9 +1,9 @@
-import { inputCarName } from './view/inputView.js';
+import { inputCarName, inputRound } from './view/inputView.js';
 
 class App {
   async run() {
-    const carnames = await inputCarName();
-    console.log(carnames);
+    const carNames = await inputCarName();
+    const round = await inputRound();
   }
 }
 

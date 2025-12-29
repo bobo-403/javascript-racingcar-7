@@ -5,3 +5,7 @@ export async function inputCarName() {
   const carNames = await Console.readLineAsync(PROGRESS_MESSAGE.INPUT_CAR_NAME);
   return carNames.split(',');
 }
+
+export async function inputRound() {
+  return await Console.readLineAsync(PROGRESS_MESSAGE.INPUT_ROUND);
+}
