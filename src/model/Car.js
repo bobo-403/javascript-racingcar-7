@@ -13,6 +13,10 @@ class Car {
   advance(random) {
     if (random >= 4) this.pos += 1;
   }
+
+  getPosState() {
+    return `${this.name} : ${'-'.repeat(this.pos)}`;
+  }
 }
 
 export default Car;

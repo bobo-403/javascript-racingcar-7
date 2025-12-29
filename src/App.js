@@ -16,6 +16,7 @@ class App {
     this.gameController.setRound(round);
 
     this.gameController.startRound();
+    this.gameController.startRound();
   }
 }
 

@@ -1,6 +1,7 @@
 import { Random } from '@woowacourse/mission-utils';
 import Car from '../model/Car.js';
 import validator from '../utils/validator.js';
+import { oneRoundPrint } from '../view/outputView.js';
 
 class GameController {
   cars;
@@ -22,10 +23,16 @@ class GameController {
   }
 
   startRound() {
+    const posStates = [];
+
     for (const car of this.cars) {
       const random = Random.pickNumberInRange(0, 9);
       car.advance(random);
+      posStates.push(car.getPosState());
     }
+
+    oneRoundPrint(this.currentRound, posStates.join('\n'));
+    this.currentRound++;
   }
 }
 
