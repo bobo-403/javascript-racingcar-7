@@ -15,8 +15,7 @@ class App {
     const round = await inputRound();
     this.gameController.setRound(round);
 
-    this.gameController.startRound();
-    this.gameController.startRound();
+    this.gameController.startGame();
   }
 }
 

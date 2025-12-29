@@ -22,6 +22,10 @@ class GameController {
     this.totalRound = Number(round);
   }
 
+  startGame() {
+    for (let i = 0; i < this.totalRound; i++) this.startRound();
+  }
+
   startRound() {
     const posStates = [];
 
